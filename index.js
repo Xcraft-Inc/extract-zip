@@ -168,6 +168,6 @@ module.exports = async function (zipPath, opts) {
   }
 
   await fs.mkdir(opts.dir, { recursive: true })
-  opts.dir = await fs.realpath(opts.dir)
+  // opts.dir = await fs.realpath(opts.dir)
   return new Extractor(zipPath, opts).extract()
 }
